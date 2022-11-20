@@ -23,7 +23,7 @@ pipeline {
 
 	  stage ('deploy') {
 
-            agent ${params.Deploy}
+		  agent { label ${params.Deploy}
 
 	     steps {
 
