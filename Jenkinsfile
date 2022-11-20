@@ -16,12 +16,7 @@ pipeline {
 		sh ''' mvn clean package'''
        	}
           }
-			
-      
-
-
-
-	  stage ('deploy') {
+	 stage ('deploy') {
 
 		  agent { label ${params.Deploy}
 
@@ -32,4 +27,4 @@ pipeline {
 }
 }
 }
-         	
+}	
