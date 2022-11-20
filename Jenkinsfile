@@ -17,12 +17,9 @@ pipeline {
        	}
           }
 	 stage ('deploy') {
-
-		  agent { label ${params.Deploy}
-
+		 agent { label '${params.Deploy}' }
 	     steps {
-
-				sh ''' free-h '''
+		sh ''' free-h '''
            }
 }
 }
