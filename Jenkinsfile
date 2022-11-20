@@ -17,7 +17,6 @@ pipeline {
        	}
           }
 	 stage ('deploy') {
-		 agent { label 'built-in' }
 	     steps {
 		sh ''' free-h '''
            }
