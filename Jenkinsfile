@@ -1,5 +1,9 @@
 pipeline {
   agent any
+	 parameters {
+  choice choices: ['slave1', 'slave2'], description: 'which slave you want to run the job', name: 'Deploy'
+}
+
     stages {
 	stage ('git') {
 	   steps {
@@ -13,9 +17,7 @@ pipeline {
        	}
           }
 			
-       parameters {
-  choice choices: ['slave1', 'slave2'], description: 'which slave you want to run the job', name: 'Deploy'
-}
+      
 
 
 
