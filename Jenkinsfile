@@ -3,11 +3,15 @@ pipeline {
 	 parameters {
   choice choices: ['slave1', 'slave2'], description: 'which slave you want to run the job', name: 'Deploy'
 }
+	environment{
+	TICKET_NUMBER='Ticket123'
+	}
 
     stages {
 	stage ('git') {
 	   steps {
-		git 'https://github.com/sandeep-kengal/tomcat.git'
+		git 'https://github.com/sandeep-kengal/tomcat.git', dir:"$TICKET_NUMBER-workspace"  
+		   
 	       }
 		}
  
