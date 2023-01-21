@@ -10,9 +10,8 @@ pipeline {
     stages {
 	stage ('git') {
 	   steps {
-		git 'https://github.com/sandeep-kengal/tomcat.git', dir:"$TICKET_NUMBER-workspace"  
-		   
-	       }
+		git 'https://github.com/sandeep-kengal/tomcat.git'     
+	      }
 		}
  
 	  stage ('Build') {
